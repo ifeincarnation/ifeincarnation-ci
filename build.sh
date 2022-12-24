@@ -1,5 +1,5 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u https://github.com/ifeincarnation/manifest -b 10.x -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://github.com/AospExtended/manifest.git -b 10.x -g default,-mips,-darwin,-notdefault
 git clone https://github.com/ifeincarnation/local_manifest --depth 1 -b aex-10 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
