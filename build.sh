@@ -12,7 +12,7 @@ export BUILD_USERNAME=$BUILD_USERNAME
 export BUILD_HOSTNAME=$BUILD_HOSTNAME
 export ALLOW_MISSING_DEPENDENCIES=true
 export SELINUX_IGNORE_NEVERALLOWS=true
-lunch nad_whyred-user
+lunch nad_whyred-userdebug
 mkfifo reading # Jangan di Hapus
 tee "${BUILDLOG}" < reading & # Jangan di Hapus
 build_message "Building Started" # Jangan di Hapus
