@@ -1,6 +1,6 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u https://github.com/bananadroid/android_manifest.git -b 13 -g default,-mips,-darwin,-notdefault
-git clone https://github.com/ifeincarnation/local_manifest --depth 1 -b banana-13 .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u https://github.com/RiceDroid/android -b thirteen -g default,-mips,-darwin,-notdefault
+git clone https://github.com/ifeincarnation/local_manifest --depth 1 -b rice-13 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
@@ -10,12 +10,12 @@ timeStart
 source build/envsetup.sh
 export BUILD_USERNAME=$BUILD_USERNAME
 export BUILD_HOSTNAME=$BUILD_HOSTNAME
-lunch banana_whyred-userdebug
+lunch lineage_whyred-userdebug
 mkfifo reading # Jangan di Hapus
 tee "${BUILDLOG}" < reading & # Jangan di Hapus
 build_message "Building Started" # Jangan di Hapus
 progress & # Jangan di Hapus
-mka banana -j8  > reading #& sleep 95m # Jangan di hapus text line (> reading)
+mka bacon -j8  > reading & sleep 95m # Jangan di hapus text line (> reading)
 
 retVal=$?
 timeEnd
