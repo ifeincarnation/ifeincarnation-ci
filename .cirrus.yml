@@ -15,7 +15,7 @@ task:
      - ./script/memuat_ccache.sh
      
   Repo-pribadi_script:
-     - git config --global user.name "ifeincarnation"
+     - git config --global user.name "ryanzsz46"
      - git config --global user.email "$EMAIL"
      - echo "$CREDENTIALS" > ~/.git-credentials
      - git config --global credential.helper store --file=~/.git-credentials
