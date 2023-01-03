@@ -1,6 +1,6 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/NusantaraProject-ROM/android_manifest -b 10 -g default,-mips,-darwin,-notdefault
-git clone https://github.com/ifeincarnation/local_manifest --depth 1 -b nad-10-lavender .repo/local_manifests
+git clone https://github.com/ryanzsz46/local_manifest --depth 1 -b nad-10-lavender .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
